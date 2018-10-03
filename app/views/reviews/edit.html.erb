@@ -1,6 +1,11 @@
-<h1>Editing Review</h1>
+<h1 class="container display-4 text-center">Editing Review</h1><br>
 
-<%= render 'form', review: @review %>
+<div class="container text-center">
+    <%= render 'form', review: @review %>
+</div>
+<br>
 
-<%= link_to 'Show', @review %> |
-<%= link_to 'Back', reviews_path %>
+<div class="container text-center">
+    <button type="button" class="btn btn-light btn-lg"><%= link_to 'Show', @review %></button>
+    <button type="button" class="btn btn-light btn-lg"><%= link_to 'Back', reviews_path %></button>
+</div>

@@ -1,5 +1,5 @@
 <div class="container text-center">
-  <p id="notice"><%= notice %></p>
+  <p class="mark" id="notice"><strong><%= notice %></p></strong>
 </div>
 
 <div class="container display-4 text-center">
@@ -18,6 +18,9 @@
     <%= @review.content %>
   </p>
 </div>
+<br>
 
-<%= link_to 'Edit', edit_review_path(@review) %> |
-<%= link_to 'Back', reviews_path %>
+<div class="container text-center">
+  <button type="button" class="btn btn-light btn-lg"><%= link_to 'Edit', edit_review_path(@review) %></button>
+  <button type="button" class="btn btn-light btn-lg"><%= link_to 'Back', reviews_path %></button>
+</div>

@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Reviews</h1>
+<h1 class="container display-4 text-center">Reviews</h1><br>
 
-<table>
+<table class="container text-center">
   <thead>
     <tr>
       <th>Rating</th>
@@ -26,6 +26,8 @@
   </tbody>
 </table>
 
-<br>
+<br><br>
 
-<%= link_to 'New Review', new_review_path %>
+<div class="container text-center">
+  <button type="button" class="btn btn-light btn-lg btn-block"><%= link_to 'New Review', new_review_path %></button>
+</div>
