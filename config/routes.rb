@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :actors
+  resources :reviews
   # get 'movies/index'
   # get 'movies/show/:id'
   # post 'movies/create'
