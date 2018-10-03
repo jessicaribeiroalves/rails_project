@@ -1,19 +1,23 @@
-<p id="notice"><%= notice %></p>
+<div class="container text-center">
+  <p id="notice"><%= notice %></p>
+</div>
 
-<p>
-  <strong>Rating:</strong>
-  <%= @review.rating %>
-</p>
+<div class="container display-4 text-center">
+  <p>
+    <strong>Rating:</strong>
+    <%= @review.rating %>
+  </p>
 
-<p>
-  <strong>Author:</strong>
-  <%= @review.author %>
-</p>
+  <p>
+    <strong>Author:</strong>
+    <%= @review.author %>
+  </p>
 
-<p>
-  <strong>Content:</strong>
-  <%= @review.content %>
-</p>
+  <p>
+    <strong>Content:</strong>
+    <%= @review.content %>
+  </p>
+</div>
 
 <%= link_to 'Edit', edit_review_path(@review) %> |
 <%= link_to 'Back', reviews_path %>
