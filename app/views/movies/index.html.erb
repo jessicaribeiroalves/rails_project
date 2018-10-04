@@ -1,13 +1,35 @@
-<h1>Movies</h1>
+<h1 class="container display-4 text-center">Movies</h1><br>
 
-<%= link_to "New Movie", new_movie_path %>
+<table class="container text-center">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Release Date</th>
+      <th>Genre</th>
+      <th>Runtime</th>
+      <th colspan="4"></th>
+    </tr>
+  </thead>
 
-<% @movies.each do |movie| %>
-    <div>
-        <%= movie.inspect %>
-        <%= link_to "Edit", edit_movie_path(movie) %>
-        <%= link_to "Delete", movie_path(movie), 
-                         method: :delete, 
-                         data: { confirm: 'Are you sure?' } %>
-    </div>
-<% end %>
+    <tbody>
+        <% @movies.each do |movie| %>
+            <tr>
+                <td><%= movie.title %></td>
+                <td><%= movie.release_date %></td>
+                <td><%= movie.genre %></td>
+                <td><%= movie.runtime %></td>
+                <td><%= link_to "Edit", edit_movie_path(movie) %></td>
+                <td><%= link_to "Delete", movie_path(movie), 
+                            method: :delete, 
+                            data: { confirm: 'Are you sure?' } %></td>
+
+            </tr>
+        <% end %>
+    </tbody>
+
+</table>
+<br><br>
+
+<div class="container text-center">
+  <button type="button" class="btn btn-light btn-lg btn-block"><%= link_to "New Movie", new_movie_path %></button>
+</div>
