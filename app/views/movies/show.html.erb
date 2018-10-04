@@ -1,3 +1,32 @@
-<%= @movie.inspect %>
+<%# <%= @movie.inspect %>
 
-<%= link_to "Movies", movies_path %>
+<div class="container text-center">
+    <p class="mark" id="notice"><strong><%= notice %></p></strong>
+</div>
+
+<div class="container display-4 text-center">
+    <p>
+        <strong>Title:</strong>
+        <%= @movie.title %>
+    </p>
+
+    <p>
+        <strong>Genre:</strong>
+        <%= @movie.genre %>
+    </p>
+
+    <p>
+        <strong>Release:</strong>
+        <%= @movie.release_date %>
+    </p>
+
+    <p>
+        <strong>Runtime:</strong>
+        <%= @movie.runtime %>
+    </p>
+</div>
+<br>
+
+<div class="container text-center">
+  <button type="button" class="btn btn-light btn-lg"><%= link_to "Back to Movies", movies_path %></button>
+</div>
